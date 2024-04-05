@@ -82,7 +82,12 @@ def main():
             display: block;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fade-in linear forwords;
+            animation-timeline: view();
+            animation-range : 250px 500px;
         }
+                
+        @keyframe  fade-in { from {scale:.8,  opacity: 0.5; } to   { scale:1, opacity: 1; }}
         </style>
     """, unsafe_allow_html=True)
 
