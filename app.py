@@ -87,7 +87,7 @@ def main():
             animation-range : 250px 500px;
         }
                 
-        @keyframe  fade-in { from {scale:.8,  opacity: 0.5; } to   { scale:1, opacity: 1; }}
+        @keyframes  fade-in { from {scale:.8,  opacity: 0.5; } to   { scale:1, opacity: 1; }}
         </style>
     """, unsafe_allow_html=True)
 
