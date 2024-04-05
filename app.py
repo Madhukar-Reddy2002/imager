@@ -47,7 +47,7 @@ def display_images(image_urls):
                     st.markdown(
                         f"""
                         <div class="image-container">
-                            <a href="{image_url}"><img src="{image_url}" class="image"></a>
+                            <img src="{image_url}" class="image">
                         </div>
                         """,
                         unsafe_allow_html=True
@@ -70,11 +70,13 @@ def main():
         .image-container {
             position: relative;
             display: inline-block;
-            width: 100%;
-            transition: transform 0.3s ease;
+            width: 50%;
+            transition: all 0.5s ease;
+            transform : translate(50%, -0%);
         }
         .image-container:hover {
             transform: scale(1.05);
+                width: 100%;
         }
         .image {
             width: 100%;
@@ -87,7 +89,8 @@ def main():
             animation-range : 250px 500px;
         }
                 
-        @keyframes  fade-in { from {scale:.8,  opacity: 0.5; } to   { scale:1, opacity: 1; }}
+        @keyframes  fade-in { from {scale:.8,  opacity: 0.5; } ,
+                to   { scale:1, opacity: 1; }}
         </style>
     """, unsafe_allow_html=True)
 
